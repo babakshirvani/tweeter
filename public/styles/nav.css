@@ -1,16 +1,29 @@
 nav {
-  font-family: "Bungee", "sans-serif";
+  position: relative;
   height: 120px;
+  width: 100%;
   background-color: #4056a1;
+  color: #fff;
   display: flex;
-  flex-direction: row;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
+  flex-direction: row;
   padding-left: 1.5em;
   padding-right: 1.5em;
-  color: #fff;
 }
-
-#changeFont {
+#logo {
+  font-family: "Bungee", "sans-serif";
+  font-size: 2em;
+}
+#write-new-text {
   font-family: "Source Sans Pro", "sans-serif";
+}
+#write-new-area {
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+}
+i {
+  color: red;
 }
