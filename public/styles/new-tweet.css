@@ -1,0 +1,38 @@
+.new-tweet {
+  width: 100%;
+  margin-bottom: 100px;
+}
+
+textarea {
+  width: 100%;
+  height: 55px;
+  font-weight: 600;
+  background-color: #f4e7d3;
+  margin-bottom: 10px;
+  resize: none;
+  outline: none;
+  border: none;
+  border-bottom: 5px solid #5e6572;
+}
+
+button {
+  font-family: "Bungee", "sans-serif";
+  color: #f4e7d3;
+  background-color: #4056a1;
+  margin-top: 15px;
+  padding: 8px;
+  border-radius: 5px;
+  border: none;
+  margin-top: 15px;
+}
+
+output {
+  font-family: "Bungee", "sans-serif";
+  color: #5e6572;
+  float: right;
+  margin-top: 15px;
+}
+
+label {
+  align-self: center;
+}
