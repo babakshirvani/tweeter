@@ -1,5 +1,4 @@
 #profile {
-  position: relative;
   height: 400px;
   width: 100%;
   display: flex;
@@ -8,4 +7,8 @@
   flex-direction: column;
   background-color: #00a2ff;
   background-image: url("/images/carbon-fibre.png");
+}
+
+#profile h2 {
+  color: rgb(141, 140, 140);
 }
