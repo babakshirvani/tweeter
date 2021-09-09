@@ -36,3 +36,6 @@ output {
 label {
   align-self: center;
 }
+textarea:focus {
+  background: none;
+}

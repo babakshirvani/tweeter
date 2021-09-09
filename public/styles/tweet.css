@@ -24,7 +24,7 @@
 
 .tweet .user-handle {
   font-size: 25px;
-  color: rgb(184, 184, 184);
+  color: rgb(224, 222, 222);
   padding: 30px 30px;
 }
 
@@ -44,6 +44,7 @@
   width: 96%;
   margin-left: 2%;
   margin-right: 2%;
+  overflow-wrap: break-word;
 }
 
 .tweet .tweet-footer {
