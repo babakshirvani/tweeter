@@ -7,15 +7,18 @@
 $(document).ready(function() {
 
   const validateForm = (text) => {
+    const $error = $('.error')
     if (!text.length) {
-      alert("Dont try to send an empty tweet");
+      $error.slideDown(500)
+      $error.html('<i class="fas fa-exclamation-triangle"></i>    Don\'t try to submit an empty tweet.    <i class="fas fa-exclamation-triangle"></i>')
       return false;
     }
     if (text.length > 140) {
-      alert("Sorry the limit is 140 characters.");
+      $error.slideDown(500)
+      $error.html('<i class="fas fa-exclamation-triangle"></i>    Your tweet is too long, limit is 140 characters.     <i class="fas fa-exclamation-triangle"></i>')
       return false
     }
-
+    $error.slideUp(500)
     return true;
 
   }

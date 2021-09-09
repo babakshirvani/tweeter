@@ -16,9 +16,10 @@
     <link rel="stylesheet" href="/styles/header.css" type="text/css" />
     <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
     <link rel="stylesheet" href="/styles/tweet.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/error.css" type="text/css" />
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.min.js" integrity="sha512-SVDh1zH5N9ChofSlNAK43lcNS7lWze6DTVx1JCXH1Tmno+0/1jMpdbR8YDgDUfcUrPp1xyE53G42GFrcM0CMVg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/client.js"></script>
     <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
@@ -40,14 +41,15 @@
       </div>
       <br>
       <div>
-          <h2>Mahsa Sh</h2>
+          <h2>Mahsa</h2>
       </div>
   </header>
 
     <!-- Page-specific (main) content here -->
     <main class="container">
       <section class="new-tweet">
-        <form method="POST", action="/tweets">
+          <p class='error'> </p> 
+        <form id="submit-form" method="POST", action="/tweets">
           <textarea name="text" id="tweet-text"  placeholder="What are you humming about?"></textarea>
           <div>
             <button type="submit">Tweet</button>
@@ -56,32 +58,9 @@
         </form>
       </section>
       <section id="tweet-container">
-        <!-- <article class= "tweet">
-          <header>
-            <div class="user-detail" >
-              <img class="avatar" src="https://i.imgur.com/v0JXau2.png">
-              <div class="user-info">
-                <span>Babak Shirvani</span>
-              </div>
-            </div>
-            <small class="user-handle">@babakShirvani</small>
-          </header>
-          <div class="tweet-body">
-            <span >Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, autem vero natus accusantium quo illo aut tenetur ut maxime alias amet mollitia magni possimus earum velit labore, consequuntur vel corporis!</span>
-          </div>  
-          <footer>
-            <div class="tweet-footer">
-              <small class="date"> 10 days ago</small>
-              <span class="reaction">
-                <i class="fas fa-heart"></i>
-                <i class="fas fa-retweet"></i>
-                <i class="fas fa-flag"></i>
-              </span>
-          </div>
-          </footer>
-        </article> -->
+        
       </section>
-
+      
     </main>
   </body>
 </html>
