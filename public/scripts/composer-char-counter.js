@@ -1,5 +1,21 @@
 
 $(document).ready(function() {
+
+  const validateForm = (text) => {
+    if (!text.length) {
+      alert("Dont try to send an empty tweet");
+      return false;
+    }
+    if (text.length > 140) {
+      alert("Sorry the limit is 140 characters.");
+      return false
+    }
+
+    return true;
+
+  }
+
+
   $('.new-tweet textarea').on('input', function() {
     const textLength = $(this).val().length;
     const count = $(this).parent().children('div').children(".counter");
@@ -12,14 +28,17 @@ $(document).ready(function() {
     event.preventDefault();
     console.log("The form has been submitted!!");
 
-    const serializedData = $(this).serialize();
-    console.log("serializedData:", serializedData);
+    const enteredText = $(this).children('textarea').val()
 
-    $.post('/tweets', serializedData, (response) => {
-      console.log("response:", response);
+    console.log("enteredText: (length):", enteredText.length)
+    if (validateForm(enteredText)) {
+      console.log("The form has been submitted!! - successfully ");
+      const serializedData = $(this).serialize();
+      $.post('/tweets', serializedData, (response) => {
+        console.log("response:", response);
 
-    })
-
+      })
+    }
   });
 
 });
