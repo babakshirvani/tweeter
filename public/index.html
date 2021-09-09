@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Source+Sans+Pro:ital,wght@0,300;0,600;1,300;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- App CSS -->
     <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
@@ -17,38 +18,45 @@
     <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
     <link rel="stylesheet" href="/styles/tweet.css" type="text/css" />
     <link rel="stylesheet" href="/styles/error.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/scrollToTopBtn.css" type="text/css" />
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.min.js" integrity="sha512-SVDh1zH5N9ChofSlNAK43lcNS7lWze6DTVx1JCXH1Tmno+0/1jMpdbR8YDgDUfcUrPp1xyE53G42GFrcM0CMVg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/client.js"></script>
+    <script type="text/javascript" src="/scripts/toggleNewTweet.js"></script>
     <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
+    <script type="text/javascript" src="/scripts/scrollToTopBtn.js"></script>
+
+
   </head>
 
   <body>
     <!-- Top nav bar (fixed) -->
     <nav>
       <span id="logo">tweeter</span>
-        <span id="write-new-area">
-          <div id="write-new-text"><b>Write</b> a new tweet</div>
-          <i class="fas fa-angle-double-down"></i>
-        </span>
+      <span id="write-new-area">
+        <div id="write-new-text"><b>Write</b> a new tweet</div>
+        <i class="fas fa-angle-double-down"></i>
+      </span>
     </nav>
-
+    
     <header id="profile">
       <div>
-          <img src="/images/profile-hex.png"> 
+        <img src="/images/profile-hex.png"> 
       </div>
       <br>
       <div>
-          <h2>Mahsa</h2>
+        <h2>Mahsa</h2>
       </div>
-  </header>
-
+    </header>
+    
     <!-- Page-specific (main) content here -->
     <main class="container">
-      <section class="new-tweet">
-          <p class='error'> </p> 
+      <!-- Scroll to Top Button -->
+      <a id="button">  </a>
+      <section class="new-tweet hide">
+          <p class='error'>  </p> 
         <form id="submit-form" method="POST", action="/tweets">
           <textarea name="text" id="tweet-text"  placeholder="What are you humming about?"></textarea>
           <div>
