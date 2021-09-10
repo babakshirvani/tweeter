@@ -12,7 +12,7 @@ $(document).ready(function() {
     const $error = $('.error')
     if (!text.length) {
       $error.slideDown(500);
-      $error.html('<i class="fas fa-exclamation-triangle"></i>    Don\'t try to submit an empty tweet.    <i class="fas fa-exclamation-triangle"></i>');
+      $error.html('<i class="fas fa-exclamation-triangle"></i>    Please don\'t submit an empty tweet.    <i class="fas fa-exclamation-triangle"></i>');
       return false;
     }
     if (text.length > 140) {
