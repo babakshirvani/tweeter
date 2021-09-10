@@ -2,7 +2,41 @@
 
 Tweeter is a simple, single-page Twitter clone.
 
-This repository is the starter code for the project: Students will fork and clone this repository, then build upon it to practice their HTML, CSS, JS, jQuery and AJAX front-end skills, and their Node, Express and MongoDB back-end skills.
+This app was built to practice `HTML`, `CSS`, `SASS`, `JS`, `jQuery` and `AJAX` front-end skills, and their `Node`, `Express` and `MongoDB` back-end skills.
+
+This app has a `responsive` layout that supports **Tablet** and **Desktop** devices
+
+# Final Product
+
+### Responsive Design
+
+!["Responsive Design"](https://github.com/babakshirvani/tweeter/blob/master/docs/responsive.gif)
+
+### Tweet Submission
+
+!["Tweet Submission"](https://github.com/babakshirvani/tweeter/blob/master/docs/tweetSub.gif)
+
+### Display Error, invalid Submission
+
+!["error Submission"](https://github.com/babakshirvani/tweeter/blob/master/docs/error.gif)
+
+### Toggle Submission Form
+
+!["Buttons Functionality"](https://github.com/babakshirvani/tweeter/blob/master/docs/toggleToTweet.gif)
+
+### Scroll back to the Top
+
+!["Buttons Functionality"](https://github.com/babakshirvani/tweeter/blob/master/docs/toggleTop.gif)
+
+## General Features
+
+1. Users can submit tweets
+2. Users can browse all submitted tweets
+
+## UX Features
+
+1. Users can hide or show tweet submission form by clicking an animated button.
+2. Users are able to scroll back to the top of the page by clicking a button.
 
 ## Getting Started
 
@@ -13,5 +47,8 @@ This repository is the starter code for the project: Students will fork and clon
 
 ## Dependencies
 
-- Express
-- Node 5.10.x or above
+- `Express`
+- `Node` 5.10.x or above
+- `Body-parser`
+- `Chance`
+- `md5`
