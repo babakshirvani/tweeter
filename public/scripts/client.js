@@ -88,6 +88,7 @@ $(document).ready(function() {
       $.post('/tweets', serializedData)
         .then(loadTweets)
         .then($(this).children('textarea').val(""))
+        .then($('.counter').val(140));
 
     }
   });
