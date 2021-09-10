@@ -1,6 +1,8 @@
 
 $(document).ready(function() {
 
+  //check the number of chars typed by user
+
   $('.new-tweet textarea').on('input', function() {
     const textLength = $(this).val().length;
     const count = $(this).parent().children('div').children(".counter");

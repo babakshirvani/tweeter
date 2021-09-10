@@ -6,27 +6,29 @@
 
 $(document).ready(function() {
 
+
+  //check if the tweet is valid , if not display error.
   const validateForm = (text) => {
     const $error = $('.error')
     if (!text.length) {
-      $error.slideDown(500)
-      $error.html('<i class="fas fa-exclamation-triangle"></i>    Don\'t try to submit an empty tweet.    <i class="fas fa-exclamation-triangle"></i>')
+      $error.slideDown(500);
+      $error.html('<i class="fas fa-exclamation-triangle"></i>    Don\'t try to submit an empty tweet.    <i class="fas fa-exclamation-triangle"></i>');
       return false;
     }
     if (text.length > 140) {
-      $error.slideDown(500)
-      $error.html('<i class="fas fa-exclamation-triangle"></i>    Your tweet is too long, limit is 140 characters.     <i class="fas fa-exclamation-triangle"></i>')
-      return false
+      $error.slideDown(500);
+      $error.html('<i class="fas fa-exclamation-triangle"></i>    Your tweet is too long, limit is 140 characters.     <i class="fas fa-exclamation-triangle"></i>');
+      return false;
     }
-    $error.slideUp(500)
+    $error.slideUp(500);
     return true;
 
   }
 
+  // remder the tweets
   const renderTweets = (tweets) => {
     const $TweetContainer = $('#tweet-container');
     $TweetContainer.empty();
-
     // loops through tweets
     for (let tweet of tweets) {
       // calls createTweetElement for each tweet
@@ -36,6 +38,7 @@ $(document).ready(function() {
     }
   };
 
+  // *** create a new tweet **
   const createTweetElement = (tweet) => {
     const { avatars, name, handle } = tweet.user;
     const { text } = tweet.content;
@@ -67,6 +70,8 @@ $(document).ready(function() {
     return $artile.append($header, $tweetBody.append($tweetText), $footer)
   }
 
+
+  //load the tweets from the server
   const loadTweets = () => {
     $.ajax('/tweets', { method: 'GET', })
       .then(renderTweets);
@@ -74,6 +79,8 @@ $(document).ready(function() {
 
   loadTweets();
 
+
+  // depends on the validation form result, submit the new tweet.
   $('form').on('submit', function(event) {
     event.preventDefault();
     console.log("The form has been submitted!!");
@@ -89,7 +96,6 @@ $(document).ready(function() {
         .then(loadTweets)
         .then($(this).children('textarea').val(""))
         .then($('.counter').val(140));
-
     }
   });
 
