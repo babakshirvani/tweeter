@@ -1,6 +1,12 @@
+.container {
+  width: 80%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
 .tweet {
   border: 3px solid #5e6572;
-  min-width: 80%;
+  width: 100%;
   margin-bottom: 20px;
 }
 
@@ -24,7 +30,7 @@
 
 .tweet .user-handle {
   font-size: 25px;
-  color: rgb(224, 222, 222);
+  color: rgb(252, 252, 252);
   padding: 30px 30px;
 }
 

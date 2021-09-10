@@ -1,16 +1,20 @@
 #profile {
   height: 400px;
   width: 100%;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
+  text-align: center;
   background-color: #00a2ff;
   background-image: url("/images/carbon-fibre.png");
   padding-top: 15px;
+}
+#profile img {
+  max-width: 256px;
+  height: auto;
 }
 
 #profile h2 {
   color: #f9b754;
   font-size: 2em;
   margin: 10px;
+  text-align: center;
+  font-family: "Bungee", "sans-serif";
 }

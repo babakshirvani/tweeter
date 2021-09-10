@@ -22,10 +22,10 @@ body {
   background-color: #f9b754;
   font-size: 24px;
   font-family: "Source Sans Pro", "sans-serif";
+  display: -webkit-flex;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+  -webkit-flex-flow: row wrap;
+  flex-flow: row wrap;
 }
 
 /*
@@ -37,5 +37,5 @@ main {
 }
 
 main section.hide {
-  display: none;
+  display: block;
 }

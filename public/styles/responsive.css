@@ -1,0 +1,17 @@
+@media (min-width: 1024px) {
+  #profile {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 300px;
+    float: left;
+    width: 30%;
+    border-radius: 50px;
+    margin: 1em;
+  }
+
+  .container {
+    width: 60%;
+    margin: 1em;
+    float: right;
+  }
+}
